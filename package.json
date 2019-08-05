@@ -1,0 +1,24 @@
+{
+  "name": "netlify-eleventy",
+  "version": "0.0.1",
+  "description": "A scaffold for a quick start building with the Eleventy static site generator",
+
+  "scripts": {
+	"start": "eleventy --serve --quiet"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "static-site-generator",
+    "webpack",
+    "sass",
+    "typescript",
+    "nunjucks",
+    "netlify"
+  ],
+  "author": "Juan Miguel Guerrero",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3"
+  }
+}
