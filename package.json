@@ -2,9 +2,11 @@
   "name": "netlify-eleventy",
   "version": "0.0.1",
   "description": "A scaffold for a quick start building with the Eleventy static site generator",
-
   "scripts": {
-	"start": "eleventy --serve --quiet"
+    "dev": "npx npm-run-all --parallel dev:del dev:eleventy dev:webpack",
+    "dev:del": "rimraf dist",
+    "dev:eleventy": "ELEVENTY_ENV=development npx eleventy --serve --quiet",
+    "dev:webpack": "npx webpack --mode=development --config webpack.dev.js --watch"
   },
   "keywords": [
     "11ty",
@@ -16,9 +18,31 @@
     "nunjucks",
     "netlify"
   ],
-  "author": "Juan Miguel Guerrero",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanmiguelguerrero/netlify-eleventy.git"
+  },
+  "author": {
+    "name": "Juan Miguel Guerrero",
+    "email": "juanmiguel@existo.es",
+    "url": "https://www.existo.es"
+  },
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.3"
+    "@11ty/eleventy": "^0.8.3",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   }
 }

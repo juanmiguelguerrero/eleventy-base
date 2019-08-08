@@ -1,6 +1,9 @@
 module.exports = function(eleventyConfig) {
+	
   eleventyConfig.addPassthroughCopy('src/images')
   eleventyConfig.addPassthroughCopy('src/css/assets')
+  // TODO: Incluir archivos configuración redirecciones Netlify
+
 
   return {
     dir: { 

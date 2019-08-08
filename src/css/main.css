@@ -1,3 +1,7 @@
-body { background: yellow; }
+body {
+  background-repeat: no-repeat;
+  background-color: pink; }
 
-h1 { font-size: 140px; }
+h1, p {
+  color: gray; }
+
