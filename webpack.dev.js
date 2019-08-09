@@ -3,6 +3,7 @@ const path = require('path');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
 
@@ -25,12 +26,21 @@ module.exports = {
 				test: /\.tsx?$/,
 				loader: 'ts-loader',
 				exclude: /node_modules/,
+           		options: {
+					appendTsSuffixTo: [/\.vue$/],
+            	}				
 			},
+
+			{
+				test: /\.vue$/,
+				loader: 'vue-loader'
+			},			
 
 			{
 				test: /\.s?css$/,
 				use: [
 					"style-loader", // creates style nodes from JS strings
+					"vue-style-loader",
 					MiniCssExtractPlugin.loader,
 					"css-loader", // translates CSS into CommonJS
 					"sass-loader" // compiles Sass to CSS, using Node Sass by default
@@ -82,12 +92,14 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: "css/[name].css",
 			chunkFilename: "[id].css"
-		})
+		}),
+		new VueLoaderPlugin()
 	],
 
 	resolve: {
-		extensions: [".tsx", ".ts", ".js", ".css", ".scss"],
+		extensions: [".tsx", ".ts", ".js", ".vue", ".css", ".scss"],
 		alias: {
+			'vue$': 'vue/dist/vue.esm.js',
 			'@': path.resolve(__dirname, 'src')
 		}
 	}
