@@ -32,8 +32,6 @@ Development mode runs a local web server with hot-reloading function at http: //
 
 ### Production Mode
 
-El modo producción genera el precompilado de las plantillas, optimizado de los estilos CSS y archivos javascript dejando el sitio web listo para su publicación en la carpeta ```/dist```.
-
 The production mode generates precompiled templates, optimized CSS styles and javascript files building the website ready for publication in the ```/dist``` folder.
 
 ```
@@ -51,6 +49,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+### Changed (2019-10-05)
+- README.md review translation and Changelog.
+- Delete `typescript` in `package.json` kewords.
+- Add `babel` and `ES6` in `packege.json` keywords.
 
 
 ## [0.1.0] - 2019-10-05
