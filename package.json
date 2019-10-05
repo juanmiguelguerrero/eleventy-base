@@ -4,13 +4,13 @@
   "description": "A scaffold for a quick start building with the Eleventy static site generator",
   "scripts": {
     "dev": "npx npm-run-all --parallel dev:*",
-	"build": "npx npm-run-all --serial prod:del prod:webpack prod:eleventy",
+    "build": "npx npm-run-all --serial prod:del prod:webpack prod:eleventy",
     "dev:del": "rimraf dist",
     "dev:eleventy": "ELEVENTY_ENV=development npx eleventy --serve --quiet",
     "dev:webpack": "npx webpack --mode=development --config webpack.dev.js --watch",
-	"prod:del": "rimraf dist",
-	"prod:eleventy": "ELEVENTY_ENV=production npx eleventy",
-	"prod:webpack": "npx webpack --mode=production --config webpack.prod.js"
+    "prod:del": "rimraf dist",
+    "prod:eleventy": "ELEVENTY_ENV=production npx eleventy",
+    "prod:webpack": "npx webpack --mode=production --config webpack.prod.js"
   },
   "keywords": [
     "11ty",
@@ -32,8 +32,16 @@
     "url": "https://www.existo.es"
   },
   "license": "MIT",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },  
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "mini-css-extract-plugin": "^0.8.0",

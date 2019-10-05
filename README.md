@@ -7,7 +7,7 @@ The configuration of this work environment includes:
 - A scaffold to start building quickly with Eleventy.
 - Webpack configuration for development and production environments.
 - Preprocessing SASS files to CSS.
-- Transpiled from Typescript to Javascript.
+- Babel for compiler modern Javascript.
 - Nunjuck configuration as template engine.
 - Compile from Vue Single File Components.
 - CSS and Javascript minified bundles.
@@ -52,9 +52,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-### Changed - 2019/08/25
-- README.md review translation
 
+## [0.1.0] - 2019-10-05
+
+### Fixed
+- Absolute path for main.css & main.js in default layout
+
+### Added
+- Babel configuration (webpack).
+- Created a `site.js` in `/_data` width `process.env.ELEVENTY_ENV` variable
+- Added a `pixel.png` in `/images`.
+- Added a `read.me` in `/css/partials`.
+- Created a `/js/modules` folder.
+
+### Changed
+- Eleventy BrowserSyncConfig (watch: true).
+- Example for load the Test Vue Single File Component.
+- README.md review translation and Changelog.
+
+### Removed
+- TypeScript configuration (webpack, typings, tsconfig.json).
 
 ## [0.0.1] - 2019-08-23
 
