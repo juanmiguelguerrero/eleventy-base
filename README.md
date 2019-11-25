@@ -70,17 +70,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-### Changed (2019-11-23)
-- README.md review Changelog.
-- Added `/functions` folder.
-- Changed `netlify.toml` with Netlify functions directory config.
-- Added a javascript lambda function example file `/functions/test.js`.
 
-### Changed (2019-10-05)
-- README.md review translation and Changelog.
-- Delete `typescript` in `package.json` kewords.
+
+## [0.2.1] - 2019-11-25
+
+### Fixed
+
+### Added
 - Add `babel` and `ES6` in `packege.json` keywords.
+- Added a javascript lambda function example file `/functions/test.js`.
+- Added `/functions` folder.
 
+### Changed
+- README.md review translation and Changelog.
+- Changed `netlify.toml` with Netlify functions directory config.
+
+### Removed
+- Delete `typescript` in `package.json` kewords.
 
 ## [0.1.0] - 2019-10-05
 
