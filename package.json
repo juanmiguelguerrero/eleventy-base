@@ -19,7 +19,7 @@
     "webpack",
     "sass",
     "babel",
-	"ES6",
+    "ES6",
     "nunjucks",
     "netlify"
   ],
@@ -37,7 +37,7 @@
     "presets": [
       "@babel/preset-env"
     ]
-  },  
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
     "@babel/core": "^7.6.2",

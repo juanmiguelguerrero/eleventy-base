@@ -38,6 +38,26 @@ The production mode generates precompiled templates, optimized CSS styles and ja
 $ npm run build
 ```
 
+### Netlify functions
+
+It´s possible to run and test our lambda functions in the local development environment without the need to publish or deploy. To do this we will globally install the Netlify CLI with the following command:
+
+```
+$ npm i -g netlify-cli
+```
+
+Once installed we can run the Netlify development environment:
+
+```
+$ netlify dev
+```
+
+To execute our function we will access to the path:
+
+```
+/localhost:8888/.netlify/functions/{{FUNCTION_NAME}}
+```
+
 ---
 
 # Changelog
@@ -49,6 +69,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+### Changed (2019-11-23)
+- README.md review Changelog.
+- Added `/functions` folder.
+- Changed `netlify.toml` with Netlify functions directory config.
+- Added a javascript lambda function example file `/functions/test.js`.
 
 ### Changed (2019-10-05)
 - README.md review translation and Changelog.
